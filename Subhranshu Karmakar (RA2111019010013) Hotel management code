@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+struct library
+{char book_name[20];
+char author[20];
+int pages;
+float price;};
+int main()
+{
+	struct
+	library lib[100];
+  char ar_nm[30], bk_nm[30];
+	int i, input, count;
+  i = input = count = 0;
+	while (input != 5) {
+		printf("*******WELCOME TO SRM LIBRARY MANAGER**********\n");
+		printf("\n\n1. Add new book infor"
+		"mation in library \n2. Display info of "
+		"books stored in library\n");
+		printf("3. List of all the books by a "
+		"given author\n");
+		printf(
+		"4. Count of book"
+		"s in the library\n");
+		printf("5. Exit the application");
+		printf("\n\nChoose one of "
+		"the above options: ");
+		scanf("%d", &input);
+		switch (input) {
+		case 1:
+		printf("Enter the book name= ");
+		scanf("%s", lib[i].book_name);
+		printf("Enter the author name= ");
+		scanf("%s", lib[i].author);
+		printf("Enter no. of pages= ");
+		scanf("%d", &lib[i].pages);
+		printf("Enter the price= ");
+		scanf("%f", &lib[i].price);
+		count++;break;
+		case 2:
+		printf("you have entered"
+		" the following "
+		"information\n");
+		for (i = 0; i < count; i++) {
+		printf("book name = %s",
+		lib[i].book_name);
+		printf("\t author name =%s",
+		lib[i].author);
+		printf("\t pages =%d",
+		lib[i].pages);
+		printf("\t price =%f",
+		lib[i].price);}break;
+    case 3:
+		printf("Enter author name : ");
+		scanf("%s", ar_nm);
+		for (i = 0; i < count; i++) {
+			if (strcmp(ar_nm,lib[i].author)
+					== 0)
+					printf("%s%s%d%.2f",lib[i].book_name,lib[i].author,lib[i].pages,lib[i].price);}break;
+		case 4:
+		printf("\n No of books in "
+		"brary : %d",count);break;
+		case 5:
+		exit(0);
+		case 6:
+		printf("ERROR!! INVALID INPUT");
+		}
+	}
+	return 0;
+}
