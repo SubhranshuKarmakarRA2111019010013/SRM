@@ -43,13 +43,13 @@ int main()
 		" the following "
 		"information\n");
 		for (i = 0; i < count; i++) {
-		printf("book name = %s",
+		printf("Name of books= %s",
 		lib[i].book_name);
-		printf("\t author name =%s",
+		printf("\nName of author= %s",
 		lib[i].author);
-		printf("\t pages =%d",
+		printf("\nNo. of pages= %d",
 		lib[i].pages);
-		printf("\t price =%f",
+		printf("\nPrice of the books= %f",
 		lib[i].price);}break;
     case 3:
 		printf("Enter author name : ");
@@ -68,4 +68,4 @@ int main()
 		}
 	}
 	return 0;
-}
+5}
