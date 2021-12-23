@@ -14,7 +14,7 @@ int main()
 	int i, input, count;
   i = input = count = 0;
 	while (input != 5) {
-		printf("*******WELCOME TO SRM LIBRARY MANAGER**********\n");
+		printf(":):):):):)WELCOME TO SRM LIBRARY MANAGER:):):):):)\n");
 		printf("\n\n1. Add new book infor"
 		"mation in library \n2. Display info of "
 		"books stored in library\n");
@@ -67,5 +67,4 @@ int main()
 		printf("ERROR!! INVALID INPUT");
 		}
 	}
-	return 0;
-5}
+	return 0;}
