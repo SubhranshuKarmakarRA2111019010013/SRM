@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-struct library                       /*structure library created*/
+
+struct library                                  /*structure library created*/
 {char book_name[20];
 char author[20];
 int pages;
 float price;};
+
 int main()
 {
-struct                            /*structure library values assigned*/
+struct                                          /*structure library values assigned*/
 library lib[100];
 char ar_nm[30], bk_nm[30];
 int i, input, count;
@@ -27,6 +29,7 @@ printf("\n\nChoose one of "
 "the above options: ");
 scanf("%d", &input);                  /*switch case option input*/
 switch (input) {                      /*switch case starts*/
+
 case 1:                               /*addinng new entry*/
 printf("Enter the book name= ");
 scanf("%s", lib[i].book_name);
@@ -37,7 +40,8 @@ scanf("%d", &lib[i].pages);
 printf("Enter the price= ");
 scanf("%f", &lib[i].price);
 count++;break;
-case 2:                             /*displaying added entries*/
+
+case 2:                               /*displaying added entries*/
 printf("you have entered"
 " the following "
 "information\n");
@@ -50,18 +54,22 @@ printf("\nNo. of pages= %d",
 lib[i].pages);
 printf("\nPrice of the books= %f",
 lib[i].price);}break;
-case 3:                             /*displaying books by specrfic author*/
+
+case 3:                              /*displaying books by specrfic author*/
 printf("Enter author name : ");
 scanf("%s", ar_nm);
 for (i = 0; i < count; i++) {
- if (strcmp(ar_nm,lib[i].author)
+if (strcmp(ar_nm,lib[i].author)
 		  == 0)
- printf("%s%s%d%.2f",lib[i].book_name,lib[i].author,lib[i].pages,lib[i].price);}break;
-case 4:                            /*no. of books currently stored*/
+printf("%s%s%d%.2f",lib[i].book_name,lib[i].author,lib[i].pages,lib[i].price);}break;
+
+case 4:                              /*no. of books currently stored*/
 printf("\n No of books in "
 "brary : %d",count);break;
-case 5:                            /*exit application*/
+
+case 5:                              /*exit application*/
 exit(0);
 }
 }
-return 0;}
+return 0;
+}
